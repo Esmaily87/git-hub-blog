@@ -11,7 +11,7 @@ export function Publications() {
   });
 
   useEffect(() => {
-    // console.log(publicationsdata)
+    console.log(publicationsdata)
   }, [publicationsdata]);
 
   return (

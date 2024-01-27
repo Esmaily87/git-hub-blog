@@ -8,6 +8,7 @@ import { api } from "../lib/axios";
 interface Mydata {
   // Defina a estrutura das transações conforme a sua API
   login: string;
+  name: string;
   id: number;
   node_id: string;
   avatar_url: string;
