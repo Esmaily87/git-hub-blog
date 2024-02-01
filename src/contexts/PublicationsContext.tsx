@@ -31,13 +31,13 @@ export const PublicationsContext = createContext({} as PublicationsContextType)
 
 export function PublicationsProvider({children}: PublicationsProviderProps){
    
-  // const [publications, setPublications] = useState<Mydata[]>([]); //////////////////////
+  // const [publications, setPublications] = useState<Mydata[]>([]); Alterei a tipagem aqui//////////////////////
   const [publications, setPublications] = useState<Mydata>();
 
     const fetchPublications = useCallback(
       async (query?: string) => {
         try {
-          // const response = await api.get<Mydata[]>('Esmaily87', { //////////////////////
+          // const response = await api.get<Mydata[]>('Esmaily87', { Alterei a tipagem aqui//////////////////////
           const response = await api.get<Mydata>('Esmaily87', {
             params: {
               q: query,

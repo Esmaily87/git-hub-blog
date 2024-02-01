@@ -10,16 +10,16 @@ export function Publications() {
     
   });
 
-  console.log(publicationsdata?.avatar_url)
+  
 
   return (
     <div>
       <Header />
       
       
-      {publicationsdata && <img src={publicationsdata.avatar_url} /> }
+      <img src={publicationsdata?.avatar_url} />
         
-      {publicationsdata && <h2>{publicationsdata.name}</h2>}
+      <h2>{publicationsdata?.name}</h2>
                   
      
     </div>
