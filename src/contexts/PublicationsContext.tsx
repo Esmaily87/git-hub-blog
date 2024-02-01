@@ -1,9 +1,7 @@
-// 9. importar as bibliotecas
+// importar as bibliotecas
 import { ReactNode, useCallback, useEffect, useState } from "react";
 import { createContext } from "use-context-selector";
 import { api } from "../lib/axios";
-
-
 
 interface Mydata {
   // Defina a estrutura das transações conforme a sua API
@@ -20,7 +18,7 @@ interface Mydata {
   // ... outros campos
 }
 interface PublicationsContextType{ //tipagem do contexto que receberá uma lista de objetos Transaction acima
-    publications: Mydata[];
+     publications: Mydata | undefined;
     
     fetchPublications: (query?: string) => Promise<void> /*parâmetro opcional deste contexto no component searchform*/
    }
@@ -33,12 +31,14 @@ export const PublicationsContext = createContext({} as PublicationsContextType)
 
 export function PublicationsProvider({children}: PublicationsProviderProps){
    
-  const [publications, setPublications] = useState<Mydata[]>([]);
+  // const [publications, setPublications] = useState<Mydata[]>([]); //////////////////////
+  const [publications, setPublications] = useState<Mydata>();
 
     const fetchPublications = useCallback(
       async (query?: string) => {
         try {
-          const response = await api.get<Mydata[]>('Esmaily87', {
+          // const response = await api.get<Mydata[]>('Esmaily87', { //////////////////////
+          const response = await api.get<Mydata>('Esmaily87', {
             params: {
               q: query,
             }
@@ -59,10 +59,7 @@ export function PublicationsProvider({children}: PublicationsProviderProps){
    
      fetchPublications();
  }, [fetchPublications]
-
-
- 
- )
+)
 
 
 
