@@ -3,17 +3,17 @@ import styled from "styled-components";
 export const RepoCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 16px;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px;
 `;
 
 export const RepoCard = styled.div`
   background-color: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  padding: 10px;
+  width: 300px;
+  padding: 16px;
   text-align: center;
   transition: transform 0.2s ease-in-out;
 
@@ -35,7 +35,7 @@ export const RepoDescription = styled.p`
 `;
 
 export const RepoLink = styled.a`
-  background-color: ${props => props.theme["blue"]};
+  background-color: #007bff;
   color: white;
   padding: 8px 16px;
   text-decoration: none;

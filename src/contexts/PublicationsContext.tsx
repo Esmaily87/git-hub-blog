@@ -4,7 +4,6 @@ import { createContext } from "use-context-selector";
 import { api } from "../lib/axios";
 
 interface Mydata {
-  // Defina a estrutura das transações conforme a sua API
   login: string;
   name: string;
   id: number;
@@ -14,9 +13,31 @@ interface Mydata {
   blog: string;
   company: string;
   created_at: string;
-  email: string;
-  // ... outros campos
+  email: string | null;
+  events_url: string;
+  followers: number;
+  followers_url: string;
+  following: number;
+  following_url: string;
+  gists_url: string;
+  gravatar_id: string | null;
+  hireable: boolean | null;
+  html_url: string;
+  location: string | null;
+  organizations_url: string;
+  public_gists: number;
+  public_repos: number;
+  received_events_url: string;
+  repos_url: string;
+  site_admin: boolean;
+  starred_url: string;
+  subscriptions_url: string;
+  twitter_username: string | null;
+  type: string;
+  updated_at: string;
+  url: string;
 }
+
 interface PublicationsContextType{ //tipagem do contexto que receberá uma lista de objetos Transaction acima
      publications: Mydata | undefined;
     

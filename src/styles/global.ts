@@ -10,9 +10,18 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     h1 {
-        color: red;
+       
 
         size: 30px;
+    }
+    h3 {
+        
+
+        size: 14px;
+    }
+
+    body, input, textarea, button {
+        font: 400 1rem Roboto, sans-serif;
     }
 
 `;
